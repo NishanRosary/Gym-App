@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShadowFit — Batman Edition</title>
+  <meta name="description" content="ShadowFit — gym landing page (Batman theme) with polished UI and demo interactions" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="ShadowFit home">
+          <div class="logo" aria-hidden>
+            <!-- simple bat mark -->
+            <svg viewBox="0 0 24 24" class="logo-svg" role="img" aria-hidden="true">
+              <path d="M12 2c2.5 0 4.7 1.6 6 4-1.8 0-3 1-4 1 0 0 1.2 2.6 4 3-2.4.2-4 2-6 2s-3.6-1.8-6-2c2.8-.4 4-3 4-3-1 0-2.2-1-4-1C7.3 3.6 9.5 2 12 2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">ShadowFit</span>
+            <span class="brand-sub">Train in the shadows. Rise in the light.</span>
+          </div>
+        </a>
+
+        <nav class="primary-nav" role="navigation" aria-label="Primary">
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+          <ul id="primaryNav" class="nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact" class="ghost">Contact</a></li>
+            <li><a href="#signup" class="cta">Join Free</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1 class="hero-title">Elevate your fitness. Unleash the night.</h1>
+            <p class="lead">Personalised programs, elite trainers and fight-ready conditioning. Start with a 7-day trial.</p>
+            <div class="actions">
+              <a href="#signup" class="btn btn-primary" id="openSignup">Create account</a>
+              <a href="#pricing" class="btn btn-ghost">View plans</a>
+            </div>
+
+            <ul class="meta-row">
+              <li><strong>📍</strong><span class="muted">Pillana Garden — Bangalore</span></li>
+              <li><strong>⏱</strong><span class="muted">Open: 5AM — 12PM</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-right" role="img" aria-label="Gym interior background" aria-hidden="false">
+            <div class="bat-signal" aria-hidden="true"></div>
+            <!-- optional image fallback -->
+            <img src="C:\Users\Nishan Rosary\Downloads\Gemini_Generated_Image_gycqagycqagycqag.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="container features" aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title">Key Features</h2>
+        <div class="features-grid">
+          <article class="card" aria-labelledby="f1">
+            <h3 id="f1">Adaptive Programs</h3>
+            <p class="muted">Training plans that evolve with your progress — strength, endurance, mobility or fat loss.</p>
+          </article>
+
+          <article class="card" aria-labelledby="f2">
+            <h3 id="f2">Live Scheduling</h3>
+            <p class="muted">Reserve classes, sync with calendar and get reminders — never miss a session.</p>
+          </article>
+
+          <article class="card" aria-labelledby="f3">
+            <h3 id="f3">Nutrition & Recovery</h3>
+            <p class="muted">Smart meal plans, macro tracking and recovery advice to accelerate gains.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="container pricing" aria-labelledby="pricing-title">
+        <h2 id="pricing-title" class="section-title">Pricing & Plans</h2>
+        <div class="pricing-row">
+          <div class="price-card">
+            <div class="price-head">
+              <div><strong>Starter</strong><div class="muted small">Beginner-friendly</div></div>
+              <div class="price">₹999<span class="small muted">/mo</span></div>
+            </div>
+            <p class="muted">Gym floor, group classes, basic tracking.</p>
+            <div class="cta-row"><button class="btn btn-primary" onclick="purchase('Starter')">Choose plan</button></div>
+          </div>
+
+          <div class="price-card featured">
+            <div class="price-head">
+              <div><strong>Pro</strong><div class="muted small">Recommended</div></div>
+              <div class="price">₹1999<span class="small muted">/mo</span></div>
+            </div>
+            <p class="muted">All Starter + 4 PT sessions / month.</p>
+            <div class="cta-row"><button class="btn btn-primary" onclick="purchase('Pro')">Choose plan</button></div>
+          </div>
+
+          <div class="price-card">
+            <div class="price-head">
+              <div><strong>Annual</strong><div class="muted small">Best value</div></div>
+              <div class="price">₹14,999<span class="small muted">/yr</span></div>
+            </div>
+            <p class="muted">Unlimited classes, priority booking.</p>
+            <div class="cta-row"><button class="btn btn-primary" onclick="purchase('Annual')">Choose plan</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trainers" class="container trainers" aria-labelledby="trainers-title">
+        <h2 id="trainers-title" class="section-title">Our Trainers</h2>
+        <div class="trainers-grid">
+          <figure class="trainer">
+            <img src="C:\Users\Nishan Rosary\Downloads\Gemini_Generated_Image_x774r5x774r5x774.png" alt="Surya Prajin — Strength Coach">
+            <figcaption>
+              <h4>Surya Prajin</h4>
+              <p class="muted">Powerlifting · Hypertrophy</p>
+              <div class="trainer-actions">
+                <button class="btn btn-ghost" onclick="contactTrainer('Surya Prajin')">Contact</button>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="trainer">
+            <img src="C:\Users\Nishan Rosary\Downloads\Gemini_Generated_Image_pdm5v1pdm5v1pdm5.png" alt="Jaisees — Functional Trainer">
+            <figcaption>
+              <h4>Jaisees</h4>
+              <p class="muted">HIIT · Mobility</p>
+              <div class="trainer-actions">
+                <button class="btn btn-ghost" onclick="contactTrainer('Jaisees')">Contact</button>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="trainer placeholder">
+            <div class="placeholder-avatar" aria-hidden="true">?</div>
+            <figcaption>
+              <h4>Apply to join</h4>
+              <p class="muted">We're hiring fitness pros.</p>
+              <div class="trainer-actions">
+                <button class="btn btn-ghost" onclick="openModal('apply')">Apply</button>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="schedule" class="container schedule" aria-labelledby="schedule-title">
+        <h2 id="schedule-title" class="section-title">Classes & Booking</h2>
+        <div class="schedule-wrap">
+          <div class="calendar card">
+            <h3>Weekly Schedule</h3>
+            <table class="schedule-table" role="table" aria-label="weekly schedule">
+              <thead>
+                <tr><th scope="col">Day</th><th scope="col">7AM</th><th scope="col">6PM</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mon</td><td>Yoga</td><td>Strength</td></tr>
+                <tr><td>Tue</td><td>HIIT</td><td>Cardio</td></tr>
+                <tr><td>Wed</td><td>Spin</td><td>Mobility</td></tr>
+                <tr><td>Thu</td><td>Strength</td><td>Boxing</td></tr>
+                <tr><td>Fri</td><td>Yoga</td><td>Functional</td></tr>
+              </tbody>
+            </table>
+            <div class="cta-row"><button class="btn btn-primary" onclick="openModal('book')">Book Class</button></div>
+          </div>
+
+          <aside class="next-class card" aria-labelledby="next-class-title">
+            <h3 id="next-class-title">Next Class</h3>
+            <div id="notif" class="muted">No upcoming bookings. Book now to reserve your spot.</div>
+            <div class="cta-row"><button class="btn btn-ghost" onclick="openModal('book')">Book</button></div>
+
+            <h4 style="margin-top:18px">Notifications</h4>
+            <div class="muted small">Booking reminders 1 hour before class.</div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="faq" class="container faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="section-title">FAQ</h2>
+        <div>
+          <button class="q" aria-expanded="false" onclick="toggleFAQ(this)">What are opening hours? <span>+</span></button>
+          <div class="faq-a">Daily from 5AM to 12PM.</div>
+
+          <button class="q" aria-expanded="false" onclick="toggleFAQ(this)">Do you offer trials? <span>+</span></button>
+          <div class="faq-a">Yes — a 7-day free trial for new members.</div>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact-wrap" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-card card" onsubmit="submitContact(event)">
+            <div class="input-row">
+              <input required name="name" placeholder="Name" aria-label="Your name" />
+              <input required name="phone" placeholder="Phone" aria-label="Your phone" />
+            </div>
+            <input required type="email" name="email" placeholder="Email" aria-label="Your email" />
+            <textarea name="message" placeholder="Message" aria-label="Your message"></textarea>
+            <div style="text-align:right"><button class="btn btn-primary" type="submit">Send Message</button></div>
+          </form>
+
+          <aside class="contact-info card">
+            <h4>Address</h4>
+            <div class="muted">Pillana Garden, Richards Town, Bangalore</div>
+            <h4 style="margin-top:12px">Phone</h4>
+            <div class="muted">+91 80 1234 5678</div>
+            <h4 style="margin-top:12px">Email</h4>
+            <div class="muted">hello@shadowfit.example</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© ShadowFit 2027</div>
+        <div class="muted">Privacy · Terms · Careers</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="dialog" role="document" aria-labelledby="dialogTitle">
+      <div id="dialogContent"></div>
+      <div class="dialog-actions"><button class="btn btn-ghost" onclick="closeModal()">Close</button></div>
+    </div>
+  </div>
+
+  <script>
+    // Small accessible nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      primaryNav.style.display = expanded ? '' : 'block';
+    });
+
+    // Modal and UI handlers
+    function openModal(type) {
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('dialogContent');
+      if (type === 'book') {
+        content.innerHTML = `
+          <h3 id="dialogTitle">Book a Class</h3>
+          <form id="bookForm">
+            <label>Name<input required name="name"></label>
+            <label>Class
+              <select name="classType">
+                <option>HIIT</option><option>Strength</option><option>Yoga</option>
+              </select>
+            </label>
+            <label>Date<input required type="date" name="date"></label>
+            <div style="text-align:right;margin-top:10px">
+              <button class="btn btn-primary" type="submit">Confirm</button>
+            </div>
+          </form>`;
+        setTimeout(() => {
+          document.getElementById('bookForm')?.addEventListener('submit', submitBooking);
+        }, 0);
+      } else if (type === 'apply') {
+        content.innerHTML = `
+          <h3 id="dialogTitle">Apply as Trainer</h3>
+          <form id="applyForm">
+            <input required name="name" placeholder="Full name">
+            <input required name="email" type="email" placeholder="Email">
+            <div style="text-align:right;margin-top:10px"><button class="btn btn-primary" type="submit">Send</button></div>
+          </form>`;
+        document.getElementById('applyForm')?.addEventListener('submit', (e) => {
+          e.preventDefault(); closeModal(); alert('Application sent — we will contact you.');
+        });
+      } else if (type === 'contact') {
+        content.innerHTML = `
+          <h3 id="dialogTitle">Contact</h3>
+          <form onsubmit="(function(e){e.preventDefault();closeModal();alert('Message sent');})(event)">
+            <input placeholder="Your name" required>
+            <input placeholder="Your email" required>
+            <div style="text-align:right;margin-top:10px"><button class="btn btn-primary" type="submit">Send</button></div>
+          </form>`;
+      }
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+      // focus first input
+      setTimeout(() => modal.querySelector('input,select,button')?.focus(), 100);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      document.getElementById('dialogContent').innerHTML = '';
+    }
+
+    function submitBooking(e) {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      closeModal();
+      alert('Booking confirmed for ' + fd.get('classType') + ' on ' + fd.get('date'));
+      document.getElementById('notif').textContent = 'Booking confirmed — reminder set 1 hour before.';
+    }
+
+    function toggleFAQ(btn) {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const answer = btn.nextElementSibling;
+      if (answer) answer.style.display = expanded ? 'none' : 'block';
+    }
+    document.querySelectorAll('.faq .faq-a').forEach(el => el.style.display = 'none');
+
+    function submitContact(e) {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      alert('Thanks ' + fd.get('name') + ', we received your message and will respond shortly.');
+      e.target.reset();
+    }
+
+    function purchase(plan) {
+      alert('Selected plan: ' + plan + ' — redirecting to secure checkout (placeholder).');
+    }
+
+    function contactTrainer(name) {
+      openModal('contact');
+      document.getElementById('dialogContent').innerHTML = `
+        <h3 id="dialogTitle">Contact ${name}</h3>
+        <p class="muted">Send a message to the trainer.</p>
+        <form onsubmit="(function(e){e.preventDefault();closeModal();alert('Message sent to ${name}');})(event)">
+          <input required placeholder="Your name">
+          <input required placeholder="Your email">
+          <div style="text-align:right;margin-top:10px"><button class="btn btn-primary" type="submit">Send</button></div>
+        </form>`;
+    }
+
+    // demo notification
+    setTimeout(() => {
+      const n = document.getElementById('notif');
+      if (n) n.textContent = 'New: Join our 6-week transformation program starting next Monday.';
+    }, 1800);
+
+    // keyboard escape to close modal
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  </script>
+</body>
+</html>
