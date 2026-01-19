@@ -10,23 +10,21 @@ function Header() {
   return (
     <header className="site-header" role="banner">
       <div className="container header-inner">
-        <a className="brand" href="#" aria-label="ShadowFit home">
+        <a className="brand" href="#" aria-label="BEAST FITNESS home">
           <div className="logo" aria-hidden>
-            <svg viewBox="0 0 24 24" className="logo-svg" role="img" aria-hidden="true">
-              <path d="M12 2c2.5 0 4.7 1.6 6 4-1.8 0-3 1-4 1 0 0 1.2 2.6 4 3-2.4.2-4 2-6 2s-3.6-1.8-6-2c2.8-.4 4-3 4-3-1 0-2.2-1-4-1C7.3 3.6 9.5 2 12 2z" fill="currentColor"/>
-            </svg>
+            <img src="/images/beast-logo.jpg" alt="Beast Fitness" className="logo-img" />
           </div>
           <div className="brand-text">
-            <span className="brand-title">ShadowFit</span>
-            <span className="brand-sub">Train in the shadows. Rise in the light.</span>
+            <span className="brand-title">BEAST FITNESS</span>
+            <span className="brand-sub">Strength has no limits</span>
           </div>
         </a>
 
         <nav className="primary-nav" role="navigation" aria-label="Primary">
-          <button 
-            id="navToggle" 
-            className="nav-toggle" 
-            aria-expanded={navOpen} 
+          <button
+            id="navToggle"
+            className="nav-toggle"
+            aria-expanded={navOpen}
             aria-controls="primaryNav"
             onClick={toggleNav}
           >

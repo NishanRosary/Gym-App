@@ -27,26 +27,28 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="container faq" aria-labelledby="faq-title">
-      <h2 id="faq-title" className="section-title">FAQ</h2>
-      <div>
-        {faqs.map((faq, index) => (
-          <React.Fragment key={index}>
-            <button 
-              className="q" 
-              aria-expanded={openIndex === index}
-              onClick={() => toggleFAQ(index)}
-            >
-              {faq.question} <span>{openIndex === index ? '−' : '+'}</span>
-            </button>
-            <div 
-              className="faq-a" 
-              style={{ display: openIndex === index ? 'block' : 'none' }}
-            >
-              {faq.answer}
-            </div>
-          </React.Fragment>
-        ))}
+    <section id="faq" className="faq" aria-labelledby="faq-title">
+      <div className="container">
+        <h2 id="faq-title" className="section-title">FAQ</h2>
+        <div>
+          {faqs.map((faq, index) => (
+            <React.Fragment key={index}>
+              <button
+                className="q"
+                aria-expanded={openIndex === index}
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question} <span>{openIndex === index ? '−' : '+'}</span>
+              </button>
+              <div
+                className="faq-a"
+                style={{ display: openIndex === index ? 'block' : 'none' }}
+              >
+                {faq.answer}
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   )

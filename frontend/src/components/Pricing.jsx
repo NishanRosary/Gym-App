@@ -34,32 +34,34 @@ function Pricing() {
   }
 
   return (
-    <section id="pricing" className="container pricing" aria-labelledby="pricing-title">
-      <h2 id="pricing-title" className="section-title">Pricing & Plans</h2>
-      <div className="pricing-row">
-        {plans.map(plan => (
-          <div key={plan.name} className={`price-card ${plan.featured ? 'featured' : ''}`}>
-            <div className="price-head">
-              <div>
-                <strong>{plan.name}</strong>
-                <div className="muted small">{plan.subtitle}</div>
+    <section id="pricing" className="pricing" aria-labelledby="pricing-title">
+      <div className="container">
+        <h2 id="pricing-title" className="section-title">Pricing & Plans</h2>
+        <div className="pricing-row">
+          {plans.map(plan => (
+            <div key={plan.name} className={`price-card ${plan.featured ? 'featured' : ''}`}>
+              <div className="price-head">
+                <div>
+                  <strong>{plan.name}</strong>
+                  <div className="muted small">{plan.subtitle}</div>
+                </div>
+                <div className="price">
+                  {plan.price}
+                  <span className="small muted">{plan.period}</span>
+                </div>
               </div>
-              <div className="price">
-                {plan.price}
-                <span className="small muted">{plan.period}</span>
+              <p className="muted">{plan.description}</p>
+              <div className="cta-row">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => handlePurchase(plan.name)}
+                >
+                  Choose plan
+                </button>
               </div>
             </div>
-            <p className="muted">{plan.description}</p>
-            <div className="cta-row">
-              <button 
-                className="btn btn-primary" 
-                onClick={() => handlePurchase(plan.name)}
-              >
-                Choose plan
-              </button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -20,15 +20,17 @@ function Features() {
   ]
 
   return (
-    <section id="features" className="container features" aria-labelledby="features-title">
-      <h2 id="features-title" className="section-title">Key Features</h2>
-      <div className="features-grid">
-        {features.map(feature => (
-          <article key={feature.id} className="card" aria-labelledby={feature.id}>
-            <h3 id={feature.id}>{feature.title}</h3>
-            <p className="muted">{feature.description}</p>
-          </article>
-        ))}
+    <section id="features" className="features" aria-labelledby="features-title">
+      <div className="container">
+        <h2 id="features-title" className="section-title">Key Features</h2>
+        <div className="features-grid">
+          {features.map(feature => (
+            <article key={feature.id} className="card" aria-labelledby={feature.id}>
+              <h3 id={feature.id}>{feature.title}</h3>
+              <p className="muted">{feature.description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -24,7 +24,7 @@ function Hero() {
         </div>
 
         <div className="hero-right" role="img" aria-label="Gym interior background">
-          <img src="/images/logo.png" alt="ShadowFit Logo" className="hero-logo" />
+          <img src="/images/beast-logo.jpg" alt="BEAST FITNESS Logo" className="hero-logo" />
           <div className="bat-signal" aria-hidden="true"></div>
         </div>
       </div>

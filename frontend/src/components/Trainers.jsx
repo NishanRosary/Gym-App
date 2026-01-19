@@ -33,64 +33,68 @@ function Trainers() {
 
   if (loading) {
     return (
-      <section id="trainers" className="container trainers" aria-labelledby="trainers-title">
-        <h2 id="trainers-title" className="section-title">Our Trainers</h2>
-        <div className="muted">Loading trainers...</div>
+      <section id="trainers" className="trainers" aria-labelledby="trainers-title">
+        <div className="container">
+          <h2 id="trainers-title" className="section-title">Our Trainers</h2>
+          <div className="muted">Loading trainers...</div>
+        </div>
       </section>
     )
   }
 
   return (
-    <section id="trainers" className="container trainers" aria-labelledby="trainers-title">
-      <h2 id="trainers-title" className="section-title">Our Trainers</h2>
-      <div className="trainers-grid">
-        {trainers.map(trainer => {
-          // Map trainer names to images
-          let trainerImage = trainer.image
-          if (!trainerImage) {
-            if (trainer.name.toLowerCase().includes('surya')) {
-              trainerImage = '/images/trainer-suryaa.png'
-            } else if (trainer.name.toLowerCase().includes('jaisees')) {
-              trainerImage = '/images/trainer-jaisees.png'
+    <section id="trainers" className="trainers" aria-labelledby="trainers-title">
+      <div className="container">
+        <h2 id="trainers-title" className="section-title">Our Trainers</h2>
+        <div className="trainers-grid">
+          {trainers.map(trainer => {
+            // Map trainer names to images
+            let trainerImage = trainer.image
+            if (!trainerImage) {
+              if (trainer.name.toLowerCase().includes('surya')) {
+                trainerImage = '/images/trainer-suryaa.png'
+              } else if (trainer.name.toLowerCase().includes('jaisees')) {
+                trainerImage = '/images/trainer-jaisees.png'
+              }
             }
-          }
-          
-          return (
-            <figure key={trainer.id} className="trainer">
-              {trainerImage ? (
-                <img src={trainerImage} alt={`${trainer.name} — ${trainer.specialty}`} />
-              ) : (
-                <div className="placeholder-avatar" aria-hidden="true">
-                  {trainer.name.charAt(0)}
-                </div>
-              )}
-              <figcaption>
-                <h4>{trainer.name}</h4>
-                <p className="muted">{trainer.specialty}</p>
-                <div className="trainer-actions">
-                  <button 
-                    className="btn btn-ghost" 
-                    onClick={() => handleContactTrainer(trainer.name)}
-                  >
-                    Contact
-                  </button>
-                </div>
-              </figcaption>
-            </figure>
-          )
-        })}
-        <figure className="trainer placeholder">
-          <div className="placeholder-avatar" aria-hidden="true">?</div>
-          <figcaption>
-            <h4>Apply to join</h4>
-            <p className="muted">We're hiring fitness pros.</p>
-            <div className="trainer-actions">
-              <button className="btn btn-ghost" onClick={() => openModal('apply')}>
-                Apply
-              </button>
-            </div>
-          </figcaption>
-        </figure>
+
+            return (
+              <figure key={trainer.id} className="trainer">
+                {trainerImage ? (
+                  <img src={trainerImage} alt={`${trainer.name} — ${trainer.specialty}`} />
+                ) : (
+                  <div className="placeholder-avatar" aria-hidden="true">
+                    {trainer.name.charAt(0)}
+                  </div>
+                )}
+                <figcaption>
+                  <h4>{trainer.name}</h4>
+                  <p className="muted">{trainer.specialty}</p>
+                  <div className="trainer-actions">
+                    <button
+                      className="btn btn-ghost"
+                      onClick={() => handleContactTrainer(trainer.name)}
+                    >
+                      Contact
+                    </button>
+                  </div>
+                </figcaption>
+              </figure>
+            )
+          })}
+          <figure className="trainer placeholder">
+            <div className="placeholder-avatar" aria-hidden="true">?</div>
+            <figcaption>
+              <h4>Apply to join</h4>
+              <p className="muted">We're hiring fitness pros.</p>
+              <div className="trainer-actions">
+                <button className="btn btn-ghost" onClick={() => openModal('apply')}>
+                  Apply
+                </button>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   )
